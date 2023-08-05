@@ -57,7 +57,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = 4000; 
+const port = process.env.PORT || 4000; // Use a variável de ambiente PORT se estiver definida, caso contrário, use 4000 como valor padrão.
 
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`);
